@@ -1,0 +1,16 @@
+.formulario {
+    margin: 50px 0px;
+
+    &__contacto {
+        background-color: lighten( map-get($coloresFondos, cuarto), 15%);
+        padding: 25px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 15px 0px black;
+    }
+    label {
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+}
+

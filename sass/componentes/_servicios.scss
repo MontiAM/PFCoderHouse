@@ -1,0 +1,83 @@
+//  gridServicios
+
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    @extend %espaciadoContenedor;
+
+    &__titulos {
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 100%;
+
+        &--img {
+            @extend %imgFormat;
+            border: 3px solid transparent;
+            text-align: center;
+            box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);
+            transition: ease 1s all;
+
+            h3 {
+                font-size: 25pxpx;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 150px;
+            }
+    
+        }
+
+        &--img:hover {
+            border: 3px solid lighten( map-get($coloresFondos, cuarto), 15%);
+            box-shadow: 0px 0px 15px 0px black;
+            color: #000;
+            p {
+                font-weight: bold;
+            }
+        }
+
+        .img1 {
+            background-image: url(../img/mate-persona.jpg);
+        }
+        
+        .img2 {
+            background-image: url(../img/mate-paisaje.jpg);
+        }
+        
+        .img3 {
+            background-image: url(../img/mate-pava.jpg);
+        }
+        
+        .img4 {
+            background-image: url(../img/mate-termo.jpg);
+        }
+        
+        .img5 {
+            background-image: url(../img/mate-yerba.jpg);
+        }
+        
+        .img6 {
+            background-image: url(../img/mate-pava.jpg);
+        }
+        
+        .img7 {
+            background-image: url(../img/mate-persona.jpg);
+        }
+        
+        .img8 {
+            background-image: url(../img/mate-termo.jpg);
+        }
+    }
+
+}

@@ -1,0 +1,39 @@
+img {
+    width: 200px;
+    height: auto;
+}
+
+
+
+.blog {
+    @extend %espaciadoContenedor;
+
+    &__seccion {
+
+        h2 {
+            @extend %titulosH;
+            font-size: 45px
+        }
+
+        &--contenido {
+            display: flex;
+            justify-content: space-around;
+
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                // align-content: center;
+                background-color: map-get($coloresFondos , primario);
+                border-radius: 15px;
+                padding: 10px;
+                margin: 10px;
+
+                .imgNoticias {
+                    align-content: center;
+                }
+            }
+        }
+    }
+}

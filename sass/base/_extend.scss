@@ -1,0 +1,42 @@
+%flexBoxRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center
+};
+
+%espaciadoContenedor {
+    margin: 0 20px 20px 20px;
+}
+
+%titulosH {
+    color: map-get($coloresLetras, titulos);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+%secciones {
+    margin: 20px;
+    padding: 15px;
+}
+
+%imgFormat {
+    margin: 15px 10px;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+// Ejemplo sintaxis: @extend %flexBoxRow
+
+// MIXINS 
+
+//Ejemplo sintaxis: @mixin cuadrado($variable1, $variable2) {
+//    color: $variable1;
+//    background-color: $variable2;
+//    width: auto;
+//}
