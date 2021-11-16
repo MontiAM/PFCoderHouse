@@ -60,6 +60,7 @@ body {
       padding: 0px; }
       @media screen and (max-width: 890px) {
         .encabezado__nav ul {
+          display: none;
           z-index: 99;
           background-color: rgba(0, 0, 0, 0.5);
           position: fixed;
@@ -67,7 +68,6 @@ body {
           left: 0px;
           right: 0px;
           bottom: 0px;
-          display: flex;
           flex-direction: column;
           padding: 50px; } }
       .encabezado__nav ul li {
@@ -87,10 +87,16 @@ body {
               font-weight: bold; } }
   .encabezado__barras {
     font-size: 40px;
-    display: none; }
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 2px;
+    border: solid transparent 2px; }
     @media screen and (max-width: 890px) {
       .encabezado__barras {
-        display: block; } }
+        display: block; }
+        .encabezado__barras:hover {
+          color: #ffff; } }
 
 footer {
   height: auto;
