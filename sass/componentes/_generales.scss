@@ -3,13 +3,12 @@ body{
     margin:0;
     padding: 0;
     background-color: map-get($coloresFondos, cuarto);
-
+    
     li {
         list-style-type: none;
     }
 
     h1 {
-        // @extend %titulosH;
         color: map-get($coloresLetras, titulos)
     }
 }
@@ -28,13 +27,17 @@ body{
 
         h1 {
             font-size: 30px;
-            color: map-get($coloresLetras, titulos)
+            color: map-get($coloresLetras, titulos);
         }
 
         &-logo {
             width: 60px;
             height: auto;
             padding: 10px;
+
+            @media screen and (max-width: 890px) {
+                display: none;
+            }
         }
 
     }
@@ -43,10 +46,34 @@ body{
         width: 50%;
         height: auto;
         padding: 10px;
+
+        @media screen and (max-width: 890px) {
+            position: absolute;
+        }
+
+        #check:checked ~ ul{
+            left: 0;
+        }
+
         ul {
             margin: 0px;
             padding: 0px;
             @extend %flexBoxRow;
+            
+            @media screen and (max-width: 890px) {
+                z-index: 10;
+                background-color: rgba(0,0,0,0.5);
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                left: -100%;
+                right: 0px;
+                bottom: 0px;     
+                flex-direction: column;
+                padding: 50px;
+                transition: 1s ease all;
+            }
+            
             li {
                 width: auto;
                 margin-left: 10px;
@@ -56,13 +83,44 @@ body{
                     text-decoration: none;
                     color: map-get($coloresLetras, titulos );
                     font-weight: bold;
+
                     &:hover, a {
                         border-bottom: #fafafa 2px solid;  
                     }
-                }
+
+                    @media screen and (max-width: 890px) {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }   
+
             }
         }
     }
+
+    &__barras {
+        font-size: 40px;
+        display: none;
+        cursor: pointer;
+        padding: 5px;
+
+        @media screen and (max-width: 890px) {
+            z-index: 20;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            display: block;
+            &:hover {
+                color: map-get($coloresLetras, titulos);
+            }
+        }
+
+    }
+
+    #check {
+        display: none;
+    }
+
 }
 
 

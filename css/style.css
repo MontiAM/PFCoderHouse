@@ -45,13 +45,43 @@ body {
       width: 60px;
       height: auto;
       padding: 10px; }
+<<<<<<< HEAD
+=======
+      @media screen and (max-width: 890px) {
+        .encabezado__icono-logo {
+          display: none; } }
+>>>>>>> develop
   .encabezado__nav {
     width: 50%;
     height: auto;
     padding: 10px; }
+<<<<<<< HEAD
     .encabezado__nav ul {
       margin: 0px;
       padding: 0px; }
+=======
+    @media screen and (max-width: 890px) {
+      .encabezado__nav {
+        position: absolute; } }
+    .encabezado__nav #check:checked ~ ul {
+      left: 0; }
+    .encabezado__nav ul {
+      margin: 0px;
+      padding: 0px; }
+      @media screen and (max-width: 890px) {
+        .encabezado__nav ul {
+          z-index: 10;
+          background-color: rgba(0, 0, 0, 0.5);
+          position: fixed;
+          width: 100%;
+          top: 0px;
+          left: -100%;
+          right: 0px;
+          bottom: 0px;
+          flex-direction: column;
+          padding: 50px;
+          transition: 1s ease all; } }
+>>>>>>> develop
       .encabezado__nav ul li {
         width: auto;
         margin-left: 10px;
@@ -63,6 +93,29 @@ body {
           font-weight: bold; }
           .encabezado__nav ul li a:hover, .encabezado__nav ul li a a {
             border-bottom: #fafafa 2px solid; }
+<<<<<<< HEAD
+=======
+          @media screen and (max-width: 890px) {
+            .encabezado__nav ul li a {
+              font-size: 20px;
+              font-weight: bold; } }
+  .encabezado__barras {
+    font-size: 40px;
+    display: none;
+    cursor: pointer;
+    padding: 5px; }
+    @media screen and (max-width: 890px) {
+      .encabezado__barras {
+        z-index: 20;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: block; }
+        .encabezado__barras:hover {
+          color: #ffff; } }
+  .encabezado #check {
+    display: none; }
+>>>>>>> develop
 
 footer {
   height: auto;
