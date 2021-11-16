@@ -18,12 +18,18 @@
     height: auto;
     @extend %flexBoxRow;
     flex-wrap: wrap;
+    justify-content: center;
     @extend %espaciadoContenedor;
 
     &__articulo {
         width: 600px;
         @extend %flexBoxRow;
         margin: 20px;
+
+        @media screen and (max-width: 547px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         img {
             width: auto;
@@ -37,14 +43,28 @@
 
         &__descArticulo {
             text-align: center;
+
+            @media screen and (max-width: 547px) {
+                margin-top: 10px;
+            }
+
             h2 {
                 font-size: 30px;
                 @extend %titulosH;
+
+                @media screen and (max-width: 547px) {
+                    font-size: 25px;
+                }
+
             }
             p {
                 font-size: 14px;
                 font-weight: bold;
                 line-height: 20px;
+
+                @media screen and (max-width: 547px) {
+                    font-size: 12px;
+                }
             }
         }
     }
