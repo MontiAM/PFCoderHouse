@@ -45,21 +45,13 @@ body {
       width: 60px;
       height: auto;
       padding: 10px; }
-<<<<<<< HEAD
-=======
       @media screen and (max-width: 890px) {
         .encabezado__icono-logo {
           display: none; } }
->>>>>>> develop
   .encabezado__nav {
     width: 50%;
     height: auto;
     padding: 10px; }
-<<<<<<< HEAD
-    .encabezado__nav ul {
-      margin: 0px;
-      padding: 0px; }
-=======
     @media screen and (max-width: 890px) {
       .encabezado__nav {
         position: absolute; } }
@@ -81,7 +73,6 @@ body {
           flex-direction: column;
           padding: 50px;
           transition: 1s ease all; } }
->>>>>>> develop
       .encabezado__nav ul li {
         width: auto;
         margin-left: 10px;
@@ -93,8 +84,6 @@ body {
           font-weight: bold; }
           .encabezado__nav ul li a:hover, .encabezado__nav ul li a a {
             border-bottom: #fafafa 2px solid; }
-<<<<<<< HEAD
-=======
           @media screen and (max-width: 890px) {
             .encabezado__nav ul li a {
               font-size: 20px;
@@ -115,7 +104,6 @@ body {
           color: #ffff; } }
   .encabezado #check {
     display: none; }
->>>>>>> develop
 
 footer {
   height: auto;
