@@ -12,27 +12,61 @@ img {
 
         h2 {
             @extend %titulosH;
-            font-size: 45px
+            font-size: 35px;
+
+            @media screen and (max-width: 870px) {
+                font-size: 20px;
+            }
+
         }
 
         &--contenido {
             display: flex;
             justify-content: space-around;
 
+            @media screen and (max-width: 870px) {
+                flex-wrap: wrap;
+            }
+
             article {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 text-align: center;
-                // align-content: center;
+                gap: 10px;
                 background-color: map-get($coloresFondos , primario);
                 border-radius: 15px;
                 padding: 10px;
                 margin: 10px;
 
+                @media screen and (max-width: 870px) {
+                    align-items: center;
+                }
+
+                h3 {
+                    font-size: 25px;
+                    @media screen and (max-width: 870px) {
+                        font-size: 18px;
+                    }
+                }
+
+                p {
+                    @media screen and (max-width: 870px) {
+                        font-size: 16px;
+                    }
+                }
+
                 .imgNoticias {
                     align-content: center;
                 }
+
+                iframe {
+                    width: auto;
+                    @media screen and (max-width: 870px) {
+                        width: 100%;
+                    }
+                }
+
             }
         }
     }
