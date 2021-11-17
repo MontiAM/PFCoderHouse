@@ -231,6 +231,10 @@ img {
 .servicios {
   display: grid;
   grid-template-columns: 1fr 4fr; }
+  @media screen and (max-width: 830px) {
+    .servicios {
+      display: flex;
+      flex-direction: column; } }
   .servicios__titulos {
     text-align: center;
     padding: 10px;
@@ -243,6 +247,17 @@ img {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 100%; }
+    @media screen and (max-width: 1120px) {
+      .servicios__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); } }
+    @media screen and (max-width: 830px) {
+      .servicios__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr); } }
+    @media screen and (max-width: 625px) {
+      .servicios__grid {
+        grid-template-columns: 1fr; } }
     .servicios__grid--img {
       border: 3px solid transparent;
       text-align: center;
