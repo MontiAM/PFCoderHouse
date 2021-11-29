@@ -4,7 +4,7 @@
   align-items: center;
   align-content: center; }
 
-.encabezado, footer, .seccionCarrusel, .index, .blog, .servicios, .nosotros, .nosotros__seccion {
+footer, .index, .servicios, .nosotros, .nosotros__seccion {
   margin: 0 20px 20px 20px; }
 
 footer h2, .index__articulo__descArticulo h2, .blog__seccion h2 {
@@ -30,8 +30,17 @@ body {
   body h1 {
     color: #ffff; }
 
+.headerNav {
+  height: 100vh;
+  margin-bottom: 10px;
+  background-color: #85b1a2; }
+
 .encabezado {
-  height: 100px; }
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: #85b1a2; }
   .encabezado__icono {
     text-decoration: none;
     display: flex;
@@ -129,12 +138,10 @@ footer {
         margin: 10x; }
 
 .seccionCarrusel {
-  background-color: #85b1a2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   padding: 15px;
   border-radius: 10px; }
   .seccionCarrusel .carousel-inner img {
-    height: 400px; }
+    height: 500px; }
 
 .index {
   height: auto;
@@ -176,46 +183,46 @@ img {
   width: 200px;
   height: auto; }
 
-.blog__seccion h2 {
-  font-size: 35px; }
-  @media screen and (max-width: 870px) {
-    .blog__seccion h2 {
-      font-size: 20px; } }
-
-.blog__seccion--contenido {
-  display: flex;
-  justify-content: space-around; }
-  @media screen and (max-width: 870px) {
-    .blog__seccion--contenido {
-      flex-wrap: wrap; } }
-  .blog__seccion--contenido article {
+.blog {
+  background-color: #85b1a2; }
+  .blog__seccion h2 {
+    font-size: 35px; }
+    @media screen and (max-width: 870px) {
+      .blog__seccion h2 {
+        font-size: 20px; } }
+  .blog__seccion--contenido {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    gap: 10px;
-    background-color: #8CB369;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 10px; }
+    justify-content: space-around; }
     @media screen and (max-width: 870px) {
-      .blog__seccion--contenido article {
-        align-items: center; } }
-    .blog__seccion--contenido article h3 {
-      font-size: 25px; }
+      .blog__seccion--contenido {
+        flex-wrap: wrap; } }
+    .blog__seccion--contenido article {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      gap: 10px;
+      border-radius: 15px;
+      padding: 10px;
+      margin: 10px; }
       @media screen and (max-width: 870px) {
-        .blog__seccion--contenido article h3 {
-          font-size: 18px; } }
-    @media screen and (max-width: 870px) {
-      .blog__seccion--contenido article p {
-        font-size: 16px; } }
-    .blog__seccion--contenido article .imgNoticias {
-      align-content: center; }
-    .blog__seccion--contenido article iframe {
-      width: auto; }
+        .blog__seccion--contenido article {
+          align-items: center; } }
+      .blog__seccion--contenido article h3 {
+        font-size: 25px; }
+        @media screen and (max-width: 870px) {
+          .blog__seccion--contenido article h3 {
+            font-size: 18px; } }
       @media screen and (max-width: 870px) {
-        .blog__seccion--contenido article iframe {
-          width: 100%; } }
+        .blog__seccion--contenido article p {
+          font-size: 16px; } }
+      .blog__seccion--contenido article .imgNoticias {
+        align-content: center; }
+      .blog__seccion--contenido article iframe {
+        width: auto; }
+        @media screen and (max-width: 870px) {
+          .blog__seccion--contenido article iframe {
+            width: 100%; } }
 
 .formulario {
   margin: 50px 0px; }
@@ -275,21 +282,21 @@ img {
       .servicios__grid--img:hover p {
         font-weight: bold; }
     .servicios__grid .img1 {
-      background-image: url(../img/mate-persona.jpg); }
+      background-image: url(../img/mate-5.jpeg); }
     .servicios__grid .img2 {
-      background-image: url(../img/mate-paisaje.jpg); }
+      background-image: url(../img/mate-2.jpeg); }
     .servicios__grid .img3 {
-      background-image: url(../img/mate-pava.jpg); }
+      background-image: url(../img/mate-3.jpeg); }
     .servicios__grid .img4 {
-      background-image: url(../img/mate-termo.jpg); }
+      background-image: url(../img/mate-7.jpeg); }
     .servicios__grid .img5 {
-      background-image: url(../img/mate-yerba.jpg); }
+      background-image: url(../img/bitacora-1.jpeg); }
     .servicios__grid .img6 {
-      background-image: url(../img/mate-pava.jpg); }
+      background-image: url(../img/bitacora-2.jpeg); }
     .servicios__grid .img7 {
-      background-image: url(../img/mate-persona.jpg); }
+      background-image: url(../img/bitacora-3.jpeg); }
     .servicios__grid .img8 {
-      background-image: url(../img/mate-termo.jpg); }
+      background-image: url(../img/bitacora-4.jpeg); }
 
 .nosotros {
   background-color: #85b1a2;
@@ -298,6 +305,13 @@ img {
   margin-bottom: 15px;
   box-sizing: border-box;
   padding: 10px; }
+  .nosotros__logo {
+    width: 100%;
+    text-align: center; }
+    .nosotros__logo img {
+      width: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 15px 0 #85b1a2; }
   .nosotros h2 {
     text-align: center;
     line-height: 70px;

@@ -6,7 +6,7 @@ img {
 
 
 .blog {
-    @extend %espaciadoContenedor;
+    background-color: lighten( map-get($coloresFondos, cuarto), 15%); 
 
     &__seccion {
 
@@ -34,7 +34,7 @@ img {
                 justify-content: space-between;
                 text-align: center;
                 gap: 10px;
-                background-color: map-get($coloresFondos , primario);
+                // background-color: map-get($coloresFondos , primario);
                 border-radius: 15px;
                 padding: 10px;
                 margin: 10px;
