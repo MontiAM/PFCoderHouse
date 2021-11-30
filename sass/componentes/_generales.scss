@@ -118,8 +118,8 @@ body{
         @media screen and (max-width: 890px) {
             z-index: 20;
             position: absolute;
-            top: 20px;
-            right: 25px;
+            top: 5px;
+            right: 30px;
             display: block;
             &:hover {
                 color: map-get($coloresLetras, titulos);

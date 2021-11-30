@@ -13,18 +13,57 @@
 
 
 .index {
-    height: auto;
-    @extend %flexBoxRow;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
+    margin: 30px 0px;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
     @extend %espaciadoContenedor;
+    
+    &__titulo {
+        @extend %espaciadoContenedor;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        
 
+        h2 {
+            font-size: 30px;
+            padding: 40px;
+            width: 30%;
+            text-align: center;
+
+            @media screen and (max-width: 1200px) {
+                width: 45%;
+            }
+            @media screen and (max-width: 820px) {
+                font-size: 25px;
+                width: 60%;
+            }
+            @media screen and (max-width: 580px) {
+                font-size: 25px;
+                width: 90%;
+            }
+        }
+
+    }
+    
     &__articulo {
-        width: 600px;
         @extend %flexBoxRow;
-        margin: 20px;
+        width: 70%;
+        height: 300px;
+        margin: 30px;
+        
+        @media screen and (max-width: 1254px) {
+            width: 90%;
+            margin: 20px;
+        }
 
-        @media screen and (max-width: 547px) {
+        @media screen and (max-width: 865px) {
+            height: auto;
+            margin: 10px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -40,28 +79,41 @@
         }
 
         &__descArticulo {
-            text-align: center;
+            height: auto;
+            @extend %flexBoxRow;
+            flex-direction: column;
 
             @media screen and (max-width: 547px) {
-                margin-top: 10px;
+                // margin-top: 10px;
             }
 
-            h2 {
+            h3 {
                 font-size: 30px;
                 @extend %titulosH;
+                line-height: 45px;
+                padding: 15px;
+
 
                 @media screen and (max-width: 547px) {
                     font-size: 25px;
+                    line-height: 35px;
+                    padding: 5px;
+                    margin: 0;
                 }
 
             }
             p {
+                width: 100;
                 font-size: 14px;
                 font-weight: bold;
+                text-align: justify;
                 line-height: 20px;
+                padding: 30px;
+
 
                 @media screen and (max-width: 547px) {
                     font-size: 12px;
+                    padding: 5px;
                 }
             }
         }

@@ -1,11 +1,14 @@
 .nosotros {
     @extend %espaciadoContenedor;
-    background-color: lighten( map-get($coloresFondos, cuarto), 15%);
+    @extend %flexBoxRow;
+    flex-direction: column;
     height: auto;
+    width: auto;
     border-radius: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
     padding: 10px;
+
 
     &__logo {
         width: 100%;
@@ -15,6 +18,10 @@
             width: auto;
             border-radius: 50%;
             box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);
+
+            @media screen and (max-width:765px) {
+                width: 90%;
+            }
         }
     }
 
@@ -28,40 +35,157 @@
             font-size: 25px;
         }
     }
-    
-    &__seccion {
-        @extend %espaciadoContenedor;
+
+    &__art {
         display: flex;
-        align-content: center;
-        justify-items: center;
+        justify-content: space-between;
+        width: 80%;
         height: auto;
-        padding: 10px;
-        margin: 20px;
-
-        @media screen and (max-width:720px) {
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+        margin: 50px 0px;
+        
+        @media screen and (max-width:1267px) {
+            width: 90%;
+            margin: 40px 0;
         }
 
-        img {
-            width: 40%;
-            height: 200px;
+        @media screen and (max-width:1040px) {
+            width: 100%;
         }
 
-        p {
-            padding: 0;
-            margin: 0;
-            width: 60%;
-            font-size: 17px;
-            line-height: 20px;
-            margin-left: 40px;
+        @media screen and (max-width:964px) {
+            flex-direction: column;
             align-items: center;
-
-            @media screen and (max-width:890px) {
-                font-size: 14px;
-                display: relative;
-            }
+            gap: 15px;
         }
+
+
+
+        &__seccion {
+            width: 33%;
+            margin: 0 15px;
+
+            @media screen and (max-width:964px) {
+                width: 70%;
+            }
+
+            @media screen and (max-width:764px) {
+                width: 90%;
+            }
+
+            #check1 , #check2 , #check3{
+                display: none;
+            }
+
+
+            .card {
+                position: relative;
+                overflow: hidden;
+                width: auto;
+                box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);
+                align-items: center;
+                cursor: pointer;
+
+
+                #check1:checked ~ .dorsoCard1{
+                    top: 0;
+                }
+
+                #check2:checked ~ .dorsoCard2{
+                    top: 0;
+                }
+
+                #check3:checked ~ .dorsoCard3{
+                    top: 0;
+                }
+
+                .img1 {
+                    background-image: url(../img/mate-5.jpeg);
+                }
+    
+                .img2 {
+                    background-image: url(../img/bitacora-3.jpeg);
+                }
+    
+                .img3 {
+                    background-image: url(../img/bitacora-mate.jpeg);
+                }
+
+            }
+
+            .frenteCard {
+                // display: none;
+                margin: 0;
+                width: 100%;
+                height: 250px;
+                @extend %imgFormat;
+                text-align: center;
+
+                
+                p {
+                    color: #fafafa;
+                    margin-top: 30%;
+                    font-weight: bold;
+                    font-size: 35px;
+                }
+                
+            }
+
+            .dorsoCard1, .dorsoCard2, .dorsoCard3 {
+                padding: 15px;
+                margin: 0;
+                width: 100%;
+                height: 250px;
+                padding: 15px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 20px;
+                background-image: radial-gradient(circle at 50%, #5B8E7D, #BC4B51);
+                z-index: 4;
+                position: absolute;
+                transition: 1s ease all;
+                top: -110%;
+                right: 0;
+
+            }
+    
+        }
+
     }
+    
+    // &__seccion {
+    //     @extend %espaciadoContenedor;
+    //     display: flex;
+    //     align-content: center;
+    //     justify-items: center;
+    //     height: auto;
+    //     padding: 10px;
+    //     margin: 20px;
+
+    //     @media screen and (max-width:720px) {
+    //         justify-content: center;
+    //         gap: 10px;
+    //         flex-wrap: wrap;
+    //     }
+
+    //     img {
+    //         width: 40%;
+    //         height: 200px;
+    //     }
+
+    //     p {
+    //         padding: 0;
+    //         margin: 0;
+    //         width: 60%;
+    //         font-size: 17px;
+    //         line-height: 20px;
+    //         margin-left: 40px;
+    //         align-items: center;
+
+    //         @media screen and (max-width:890px) {
+    //             font-size: 14px;
+    //             display: relative;
+    //         }
+    //     }
+    // }
 }
