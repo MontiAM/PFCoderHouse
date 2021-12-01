@@ -29,3 +29,60 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+%bannerSticky {
+    z-index: -1;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    
+}
+
+%bannerSticki-contenido {
+    height: 87vh;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 673px) {
+        flex-wrap: wrap;
+    }
+}
+
+%bannerSticki-contenido-h2 {
+    background-color: lighten( map-get($coloresFondos, cuarto), 15%);
+    padding: 30px 50px 30px 150px;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 0 15px 15px 0px;
+    @media screen and (max-width: 858px) {
+        padding: 25px 40px 25px 130px;
+        font-size: 35;
+    }
+ }
+
+ %bannerSticki-contenido-p {
+    margin-left: 400px;
+    width: 400px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    @media screen and (max-width: 1292px) {
+        margin-left: 250px;
+    }
+    @media screen and (max-width: 1055px) {
+        margin-left: 150px;
+    }
+    @media screen and (max-width: 865px) {
+        width: auto;
+        margin: 0px 50px;
+    }
+
+    
+ }

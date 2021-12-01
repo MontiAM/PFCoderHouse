@@ -1,9 +1,27 @@
 //  gridServicios
 
+.banner {
+    background-image: url(../img/bitacora-mate.jpeg);
+    @extend %bannerSticky;
+
+    &-contenido {
+        @extend %bannerSticki-contenido;
+
+        h2 {
+            @extend %bannerSticki-contenido-h2;
+        }
+
+        p {
+            @extend %bannerSticki-contenido-p;
+        }
+    }
+}
+
+
 .servicios {
-    display: grid;
+    background-color: map-get($coloresFondos, cuarto);    display: grid;
     grid-template-columns: 1fr 4fr;
-    @extend %espaciadoContenedor;
+    padding: 50px 0px;
 
     @media screen and (max-width: 830px) {
         display: flex;

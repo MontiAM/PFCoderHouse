@@ -4,10 +4,10 @@
   align-items: center;
   align-content: center; }
 
-footer, .index, .index__titulo, .servicios, .nosotros {
+footer, .index, .index__titulo, .nosotros {
   margin: 0 20px 20px 20px; }
 
-footer h2, .index__articulo__descArticulo h3, .blog__seccion h2 {
+footer h2, .index__articulo__descArticulo h3 {
   color: #ffff;
   font-weight: bold;
   text-align: center;
@@ -20,6 +20,55 @@ footer h2, .index__articulo__descArticulo h3, .blog__seccion h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.blog__banner, .banner {
+  z-index: -1;
+  position: sticky;
+  top: 50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.blog__banner-contenido, .banner-contenido {
+  height: 87vh;
+  display: flex;
+  align-items: center; }
+  @media screen and (max-width: 673px) {
+    .blog__banner-contenido, .banner-contenido {
+      flex-wrap: wrap; } }
+
+.blog__banner-contenido h2, .banner-contenido h2 {
+  background-color: #85b1a2;
+  padding: 30px 50px 30px 150px;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 0 15px 15px 0px; }
+  @media screen and (max-width: 858px) {
+    .blog__banner-contenido h2, .banner-contenido h2 {
+      padding: 25px 40px 25px 130px;
+      font-size: 35; } }
+
+.blog__banner-contenido p, .banner-contenido p {
+  margin-left: 400px;
+  width: 400px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600; }
+  @media screen and (max-width: 1292px) {
+    .blog__banner-contenido p, .banner-contenido p {
+      margin-left: 250px; } }
+  @media screen and (max-width: 1055px) {
+    .blog__banner-contenido p, .banner-contenido p {
+      margin-left: 150px; } }
+  @media screen and (max-width: 865px) {
+    .blog__banner-contenido p, .banner-contenido p {
+      width: auto;
+      margin: 0px 50px; } }
 
 body {
   margin: 0;
@@ -225,45 +274,44 @@ img {
   height: auto; }
 
 .blog {
-  background-color: #85b1a2; }
-  .blog__seccion h2 {
-    font-size: 35px; }
-    @media screen and (max-width: 870px) {
-      .blog__seccion h2 {
-        font-size: 20px; } }
-  .blog__seccion--contenido {
-    display: flex;
-    justify-content: space-around; }
-    @media screen and (max-width: 870px) {
-      .blog__seccion--contenido {
-        flex-wrap: wrap; } }
-    .blog__seccion--contenido article {
+  position: relative; }
+  .blog__banner {
+    background-image: url(../img/mate-yerba.jpg); }
+  .blog__seccion {
+    background-color: #5B8E7D; }
+    .blog__seccion--contenido {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      gap: 10px;
-      border-radius: 15px;
-      padding: 10px;
-      margin: 10px; }
+      justify-content: space-around; }
       @media screen and (max-width: 870px) {
-        .blog__seccion--contenido article {
-          align-items: center; } }
-      .blog__seccion--contenido article h3 {
-        font-size: 25px; }
+        .blog__seccion--contenido {
+          flex-wrap: wrap; } }
+      .blog__seccion--contenido article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        gap: 10px;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px; }
         @media screen and (max-width: 870px) {
-          .blog__seccion--contenido article h3 {
-            font-size: 18px; } }
-      @media screen and (max-width: 870px) {
-        .blog__seccion--contenido article p {
-          font-size: 16px; } }
-      .blog__seccion--contenido article .imgNoticias {
-        align-content: center; }
-      .blog__seccion--contenido article iframe {
-        width: auto; }
+          .blog__seccion--contenido article {
+            align-items: center; } }
+        .blog__seccion--contenido article h3 {
+          font-size: 25px; }
+          @media screen and (max-width: 870px) {
+            .blog__seccion--contenido article h3 {
+              font-size: 18px; } }
         @media screen and (max-width: 870px) {
-          .blog__seccion--contenido article iframe {
-            width: 100%; } }
+          .blog__seccion--contenido article p {
+            font-size: 16px; } }
+        .blog__seccion--contenido article .imgNoticias {
+          align-content: center; }
+        .blog__seccion--contenido article iframe {
+          width: auto; }
+          @media screen and (max-width: 870px) {
+            .blog__seccion--contenido article iframe {
+              width: 100%; } }
 
 .formulario {
   margin: 50px 0px; }
@@ -276,9 +324,14 @@ img {
     margin: 10px 0;
     font-weight: bold; }
 
+.banner {
+  background-image: url(../img/bitacora-mate.jpeg); }
+
 .servicios {
+  background-color: #5B8E7D;
   display: grid;
-  grid-template-columns: 1fr 4fr; }
+  grid-template-columns: 1fr 4fr;
+  padding: 50px 0px; }
   @media screen and (max-width: 830px) {
     .servicios {
       display: flex;
