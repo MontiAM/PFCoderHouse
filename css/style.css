@@ -42,14 +42,14 @@ footer h2, .index__articulo__descArticulo h3 {
     .blog__banner-contenido, .banner-contenido {
       flex-wrap: wrap; } }
 
-.blog__banner-contenido h2, .banner-contenido h2 {
+.blog__banner-contenido h2, .blog__seccion h2, .banner-contenido h2 {
   background-color: #85b1a2;
   padding: 30px 50px 30px 150px;
   font-size: 40px;
   font-weight: bold;
   border-radius: 0 15px 15px 0px; }
   @media screen and (max-width: 858px) {
-    .blog__banner-contenido h2, .banner-contenido h2 {
+    .blog__banner-contenido h2, .blog__seccion h2, .banner-contenido h2 {
       padding: 25px 40px 25px 130px;
       font-size: 35; } }
 
@@ -278,7 +278,16 @@ img {
   .blog__banner {
     background-image: url(../img/mate-yerba.jpg); }
   .blog__seccion {
-    background-color: #5B8E7D; }
+    background-color: #5B8E7D;
+    padding-top: 40px; }
+    .blog__seccion h2 {
+      width: 40%; }
+      @media screen and (max-width: 915px) {
+        .blog__seccion h2 {
+          width: 50%; } }
+      @media screen and (max-width: 915px) {
+        .blog__seccion h2 {
+          width: 60%; } }
     .blog__seccion--contenido {
       display: flex;
       justify-content: space-around; }
@@ -293,15 +302,33 @@ img {
         gap: 10px;
         border-radius: 15px;
         padding: 10px;
-        margin: 10px; }
+        width: 30%;
+        height: auto; }
         @media screen and (max-width: 870px) {
           .blog__seccion--contenido article {
             align-items: center; } }
+        @media screen and (max-width: 870px) {
+          .blog__seccion--contenido article {
+            width: 90%;
+            height: auto;
+            margin-bottom: 30px; } }
+        .blog__seccion--contenido article .botones {
+          border: 2px solid transparent;
+          border-radius: 15px;
+          background-color: #F4E285;
+          box-shadow: 0 0 15px 0 #85b1a2;
+          transition: 1s ease all; }
+          .blog__seccion--contenido article .botones:hover {
+            border: 2px solid #000;
+            box-shadow: 0 0 15px 0 #000; }
         .blog__seccion--contenido article h3 {
-          font-size: 25px; }
-          @media screen and (max-width: 870px) {
+          border-top: 2px solid #000;
+          border-bottom: 2px solid #000;
+          font-size: 25px;
+          height: 100px; }
+          @media screen and (max-width: 1187px) {
             .blog__seccion--contenido article h3 {
-              font-size: 18px; } }
+              font-size: 20px; } }
         @media screen and (max-width: 870px) {
           .blog__seccion--contenido article p {
             font-size: 16px; } }

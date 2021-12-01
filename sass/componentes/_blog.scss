@@ -28,6 +28,18 @@ img {
 
     &__seccion {
         background-color: map-get($coloresFondos, cuarto);
+        padding-top: 40px;
+
+        h2 {
+            width: 40%;
+            @extend %bannerSticki-contenido-h2;
+            @media screen and (max-width: 915px) {
+                width: 50%;
+            }
+            @media screen and (max-width: 915px) {
+                width: 60%;
+            }
+        }
 
 
         &--contenido {
@@ -44,19 +56,39 @@ img {
                 justify-content: space-between;
                 text-align: center;
                 gap: 10px;
-                // background-color: map-get($coloresFondos , primario);
                 border-radius: 15px;
                 padding: 10px;
-                margin: 10px;
-
+                width: 30%;
+                height: auto;                
                 @media screen and (max-width: 870px) {
                     align-items: center;
                 }
+                @media screen and (max-width: 870px) {
+                    width: 90%;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+
+                .botones {
+                    border: 2px solid transparent;
+                    border-radius: 15px;
+                    background-color: #F4E285;
+                    box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);  
+                    transition: 1s ease all;
+
+                    &:hover {
+                        border: 2px solid #000;
+                        box-shadow: 0 0 15px 0 #000;  
+                    }
+                }
 
                 h3 {
+                    border-top: 2px solid #000;
+                    border-bottom: 2px solid #000;
                     font-size: 25px;
-                    @media screen and (max-width: 870px) {
-                        font-size: 18px;
+                    height: 100px;
+                    @media screen and (max-width: 1187px) {
+                        font-size: 20px;
                     }
                 }
 
