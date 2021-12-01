@@ -17,6 +17,10 @@
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
+
+        p {
+            font-weight: bold;
+        }
     }
 
     &__grid {
@@ -44,13 +48,26 @@
             box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);
             transition: ease 1s all;
 
+            @media screen and (max-width: 625px) {
+                height: 250px;
+            }
+
             h3 {
-                font-size: 25pxpx;
+                margin-top: 10px;
+                width: 70%;
+                font-size: 25px;
                 font-weight: bold;
+                border-top: 2px solid #000;
             }
 
             p {
                 margin-top: 150px;
+                transition: 1s ease all;
+
+                @media screen and (max-width: 830px) {
+                    font-weight: bold;
+                }
+
             }
     
         }

@@ -73,6 +73,11 @@
             height: 300px;
             box-shadow: 0 0 15px 0 map-get($coloresFondos , quinto);
             transition: ease 1s all;
+
+            @media screen and (max-width: 520px) {
+                width: 90%;                
+            }
+
         }
         img:hover {
             transform: scale(1.3);
