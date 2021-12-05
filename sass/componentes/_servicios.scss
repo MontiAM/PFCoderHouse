@@ -65,6 +65,8 @@
             text-align: center;
             box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);
             transition: ease 1s all;
+            margin: 10px;
+
 
             @media screen and (max-width: 625px) {
                 height: 250px;

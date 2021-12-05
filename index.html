@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a0faba7661.js" crossorigin="anonymous"></script>
+    <!-- AOS Scroll Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -94,14 +97,14 @@
               <h2>Somos <strong>Bel y Ani. </strong>Artesanías que llenan de color y amor tus momentos. Hecho en casa, a mano y con mucho ♥</h2>
           </article>
 
-          <article class="index__articulo art1">
+          <article data-aos="fade-right" class="index__articulo art1">
               <h3>MATES</h3>
               <div class="index__articulo__descArticulo">
                   <p>"El Mate"...esa excusa para el encuentro. Esa tradición hecha costumbre. Esa herencia de nuestros ancestros, que viajó a través del tiempo, manteniéndose casi intacta. Esa compañía incondicional en los mejores y peores momentos. Dulce, amargo, caliente, tiibio, con espumita, con yuyitos. "El Mate", un solo objeto, muchos significados.</p>
               </div>
           </article>
   
-          <article class="index__articulo art2">
+          <article data-aos="fade-left" class="index__articulo art2">
             <h3>BITACORAS</h3>
               <div class="index__articulo__descArticulo">
                   <p>La mejor forma de poner en orden nuestra cabeza y nuestro ❤ es escribiendo. La escritura es magia en papel...dicen los/as que saben.
@@ -112,7 +115,7 @@
   
     </main>
     
-    <footer  id="ubicacion">
+    <footer data-aos="fade-up" id="ubicacion">
         <h2>Encontranos</h2>
         <section class="footerLinks">
             <div class="footerLinks__links">    
@@ -134,5 +137,9 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- AOS Initialize -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

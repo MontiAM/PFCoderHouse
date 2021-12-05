@@ -376,7 +376,8 @@ img {
       border: 3px solid transparent;
       text-align: center;
       box-shadow: 0 0 15px 0 #85b1a2;
-      transition: ease 1s all; }
+      transition: ease 1s all;
+      margin: 10px; }
       @media screen and (max-width: 625px) {
         .servicios__grid--img {
           height: 250px; } }
