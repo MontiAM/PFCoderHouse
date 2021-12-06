@@ -150,7 +150,7 @@ footer {
             margin: 15px;
             div {
                 a { 
-                    color: #000;
+                    color: map-get($coloresLetras, parrafos);
                     margin: 30px;
                     i {
                         font-size: 45px;

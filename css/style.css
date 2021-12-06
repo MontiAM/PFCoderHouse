@@ -395,7 +395,7 @@ img {
             font-weight: bold; } }
     .servicios__grid--img:hover {
       border: 3px solid #85b1a2;
-      box-shadow: 0px 0px 15px 0px black;
+      box-shadow: 0px 0px 15px 0px #000;
       color: #000;
       transform: scale(1.05); }
       .servicios__grid--img:hover p {
@@ -497,7 +497,7 @@ img {
         height: 250px;
         text-align: center; }
         .nosotros__art__seccion .frenteCard p {
-          color: #fafafa;
+          color: #ffff;
           margin-top: 30%;
           font-weight: bold;
           font-size: 35px; }

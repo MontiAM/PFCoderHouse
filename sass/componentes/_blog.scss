@@ -3,8 +3,6 @@ img {
     height: auto;
 }
 
-
-
 .blog {
     position: relative;
 
@@ -22,7 +20,6 @@ img {
             p {
                 @extend %bannerSticki-contenido-p;
             }
-
         }
     }
 
@@ -33,14 +30,15 @@ img {
         h2 {
             width: 40%;
             @extend %bannerSticki-contenido-h2;
+
             @media screen and (max-width: 915px) {
                 width: 50%;
             }
+
             @media screen and (max-width: 915px) {
                 width: 85%;
             }
         }
-
 
         &--contenido {
             display: flex;
@@ -60,9 +58,11 @@ img {
                 padding: 10px;
                 width: 30%;
                 height: auto;                
+
                 @media screen and (max-width: 870px) {
                     align-items: center;
                 }
+
                 @media screen and (max-width: 870px) {
                     width: 90%;
                     height: auto;
@@ -72,24 +72,26 @@ img {
                 .botones {
                     border: 2px solid transparent;
                     border-radius: 15px;
-                    background-color: #F4E285;
+                    background-color: map-get($coloresFondos, secundario);
                     box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);  
                     transition: 1s ease all;
 
                     &:hover {
-                        border: 2px solid #000;
-                        box-shadow: 0 0 15px 0 #000;  
+                        border: 2px solid map-get($coloresLetras,parrafos);
+                        box-shadow: 0 0 15px 0 map-get($coloresLetras,parrafos);  
                     }
                 }
 
                 h3 {
-                    border-top: 2px solid #000;
-                    border-bottom: 2px solid #000;
+                    border-top: 2px solid map-get($coloresLetras,parrafos);
+                    border-bottom: 2px solid map-get($coloresLetras,parrafos);
                     font-size: 25px;
                     height: 100px;
+
                     @media screen and (max-width: 1187px) {
                         font-size: 20px;
                     }
+
                     @media screen and (max-width: 855px) {
                         height: auto;
                         padding: 10px;
@@ -112,7 +114,6 @@ img {
                         width: 100%;
                     }
                 }
-
             }
         }
     }
