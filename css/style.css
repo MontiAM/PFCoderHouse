@@ -133,14 +133,14 @@ body {
       .encabezado__nav ul li {
         width: auto;
         margin-left: 10px;
-        border-bottom: #fafafa 2px transparent; }
+        border-bottom: #ffff 2px transparent; }
         .encabezado__nav ul li a {
           font-size: 16px;
           text-decoration: none;
           color: #ffff;
           font-weight: bold; }
           .encabezado__nav ul li a:hover, .encabezado__nav ul li a a {
-            border-bottom: #fafafa 2px solid; }
+            border-bottom: #ffff 2px solid; }
           @media screen and (max-width: 890px) {
             .encabezado__nav ul li a {
               font-size: 20px;
