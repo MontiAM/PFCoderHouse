@@ -17,13 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a0faba7661.js" crossorigin="anonymous"></script>
+    <!-- AOS Scroll Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
-    <header class="encabezado">
+    <header class="headerNav">
+      <div class="encabezado"> 
         <a href="index.html" class="encabezado__icono">
-            <img class="encabezado__icono-logo" src="img/coffee-solid.svg" alt="icono de pagina">
-            <h1>Apapach - Art</h1>
+          <img class="encabezado__icono-logo" src="img/coffee-solid.svg" alt="icono de pagina">
+          <h1>Apapach - Art</h1>
         </a>
         <nav class="encabezado__nav">
             <input type="checkbox" id="check"> 
@@ -38,11 +42,9 @@
         </nav>
         <label for="check" class="encabezado__barras">
           <i class="fas fa-bars"></i>
-        </label>          
-    </header>
-
-    <main>
-      <title>Mates pintados</title>
+        </label>
+      </div>    
+      
       <section class="seccionCarrusel">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -82,54 +84,61 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-      </section> 
-  
+      </section>
+
+    </header>
+
+    <main> 
+
       <section class="index"> 
-          <article class="index__articulo">
-              <img src="img/mate-persona.jpg" alt="foto descripcion subtitulo1">
+
+          <article class="index__titulo">
+              <h2>Somos <strong>Bel y Ani. </strong>Artesanías que llenan de color y amor tus momentos. Hecho en casa, a mano y con mucho ♥</h2>
+          </article>
+
+          <article data-aos="fade-right" class="index__articulo art1">
+              <h3>MATES</h3>
               <div class="index__articulo__descArticulo">
-                  <h2>Subtitulo1</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe alias dolore deserunt nostrum cumque fugiat dicta, recusandae nesciunt obcaecati provident harum, placeat pariatur architecto asperiores. Odio, voluptatibus quod! Quod porro delectus odio ad quisquam, autem doloremque nobis dignissimos? Animi esse debitis aliquid quos eius, impedit asperiores itaque optio deleniti quaerat beatae doloribus ipsum assumenda iure tempore tempora atque.</p>
+                  <p>"El Mate"...esa excusa para el encuentro. Esa tradición hecha costumbre. Esa herencia de nuestros ancestros, que viajó a través del tiempo, manteniéndose casi intacta. Esa compañía incondicional en los mejores y peores momentos. Dulce, amargo, caliente, tiibio, con espumita, con yuyitos. "El Mate", un solo objeto, muchos significados.</p>
               </div>
           </article>
   
-          <article class="index__articulo">
-              <img src="img/mate-termo.jpg" alt="foto descripcion subtitulo2">
+          <article data-aos="fade-right" class="index__articulo art2">
+            <h3>BITACORAS</h3>
               <div class="index__articulo__descArticulo">
-                  <h2>Subtitulo1</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe alias dolore deserunt nostrum cumque fugiat dicta, recusandae nesciunt obcaecati provident harum, placeat pariatur architecto asperiores. Odio, voluptatibus quod! Quod porro delectus odio ad quisquam, autem doloremque nobis dignissimos? Animi esse debitis aliquid quos eius, impedit asperiores itaque optio deleniti quaerat beatae doloribus ipsum assumenda iure tempore tempora atque.</p>
+                  <p>La mejor forma de poner en orden nuestra cabeza y nuestro ❤ es escribiendo. La escritura es magia en papel...dicen los/as que saben.
+                  Me interesa la palabra poética y esa fenomenal potencia que tiene para atravesarnos. La palabra poética es una palabra que dice lo que no dice, que dice mucho más allá, mucho más adentro del sentido. Es la palabra que derriba muros y que llega hasta el final del sentido. Y sin embargo, como extrañamente, a veces está en el cajón de los repasadores. En el patio de atrás. "Liliana Bodoc"</p>
               </div>
           </article>
       </section> 
   
-      <hr>
     </main>
     
-    <footer  id="ubicacion">
+    <footer data-aos="fade-up" id="ubicacion">
         <h2>Encontranos</h2>
         <section class="footerLinks">
             <div class="footerLinks__links">    
                 <div>
-                    <a href=""><i class="fas fa-phone-square-alt"></i></a>
+                    <a href="https://m.facebook.com/apapach.arts"><i class="fab fa-facebook-square"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="fas fa-envelope-square"></i></a>
+                    <a href="mailto:apapach.art.ok@gmail.com"><i class="fas fa-envelope-square"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://www.instagram.com/apapach.art/"><i class="fab fa-instagram-square"></i></a>
                 </div>
             </div>
             <div class="footerLinks__footerMap">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0466887613097!2d-64.16950818530641!3d-31.412839703222726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2a16b3f0cb3%3A0x6a55a48df0de6c44!2sLima%201221%2C%20X5004%20FQO%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1633404035456!5m2!1ses!2sar" width="300" height="225" style="border: 1px solid #000;" allowfullscreen="" loading="lazy">Direccion</iframe>    
             </div>
-            
-        
         </section>
-        
     </footer>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- Comentario para poder poner el commit de superticion -->
+
+    <!-- AOS Initialize -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

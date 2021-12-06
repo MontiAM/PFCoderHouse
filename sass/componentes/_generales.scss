@@ -1,4 +1,5 @@
 
+// BODY ---------------------------------------
 body{
     margin:0;
     padding: 0;
@@ -13,10 +14,19 @@ body{
     }
 }
 // HEADER Y NAV ---------------------------------------
+.headerNav {    
+    height: 100vh;
+    margin-bottom: 10px;
+    background-color: lighten( map-get($coloresFondos, cuarto), 15%); 
+}
+
 .encabezado {
     @extend %flexBoxRow;
-    height: 100px;
-    @extend %espaciadoContenedor;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: lighten( map-get($coloresFondos, cuarto), 15%); 
 
     &__icono {
         text-decoration: none;
@@ -39,7 +49,6 @@ body{
                 display: none;
             }
         }
-
     }
 
     &__nav {
@@ -77,7 +86,7 @@ body{
             li {
                 width: auto;
                 margin-left: 10px;
-                border-bottom: #fafafa 2px transparent;
+                border-bottom: map-get($coloresLetras, titulos) 2px transparent;
                 a {
                     font-size: map-get($letras , nav );
                     text-decoration: none;
@@ -85,7 +94,7 @@ body{
                     font-weight: bold;
 
                     &:hover, a {
-                        border-bottom: #fafafa 2px solid;  
+                        border-bottom: map-get($coloresLetras, titulos) 2px solid;  
                     }
 
                     @media screen and (max-width: 890px) {
@@ -93,7 +102,6 @@ body{
                         font-weight: bold;
                     }
                 }   
-
             }
         }
     }
@@ -107,8 +115,8 @@ body{
         @media screen and (max-width: 890px) {
             z-index: 20;
             position: absolute;
-            top: 20px;
-            right: 25px;
+            top: 5px;
+            right: 30px;
             display: block;
             &:hover {
                 color: map-get($coloresLetras, titulos);
@@ -120,17 +128,14 @@ body{
     #check {
         display: none;
     }
-
 }
-
-
 
 // FOOTER ---------------------------------------------
 
 footer {
     @extend  %espaciadoContenedor;
     height: auto;
-    background-image: radial-gradient(circle at 50%, #5B8E7D, #BC4B51);
+    background-image: radial-gradient(circle at 50%,map-get($coloresFondos, cuarto), map-get($coloresFondos, quinto));
     border-radius: 10px;
     h2 {
         @extend %titulosH;
@@ -145,7 +150,7 @@ footer {
             margin: 15px;
             div {
                 a { 
-                    color: #000;
+                    color: map-get($coloresLetras, parrafos);
                     margin: 30px;
                     i {
                         font-size: 45px;
@@ -164,3 +169,5 @@ footer {
     }
 
 }
+
+

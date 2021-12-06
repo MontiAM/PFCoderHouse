@@ -3,21 +3,41 @@ img {
     height: auto;
 }
 
-
-
 .blog {
-    @extend %espaciadoContenedor;
+    position: relative;
 
-    &__seccion {
+    &__banner {
+        background-image: url(../img/mate-yerba.jpg);
+        @extend %bannerSticky;
 
-        h2 {
-            @extend %titulosH;
-            font-size: 35px;
+        &-contenido {
+            @extend %bannerSticki-contenido;
 
-            @media screen and (max-width: 870px) {
-                font-size: 20px;
+            h2 {
+                @extend %bannerSticki-contenido-h2;
             }
 
+            p {
+                @extend %bannerSticki-contenido-p;
+            }
+        }
+    }
+
+    &__seccion {
+        background-color: map-get($coloresFondos, cuarto);
+        padding-top: 40px;
+
+        h2 {
+            width: 40%;
+            @extend %bannerSticki-contenido-h2;
+
+            @media screen and (max-width: 915px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 915px) {
+                width: 85%;
+            }
         }
 
         &--contenido {
@@ -34,19 +54,47 @@ img {
                 justify-content: space-between;
                 text-align: center;
                 gap: 10px;
-                background-color: map-get($coloresFondos , primario);
                 border-radius: 15px;
                 padding: 10px;
-                margin: 10px;
+                width: 30%;
+                height: auto;                
 
                 @media screen and (max-width: 870px) {
                     align-items: center;
                 }
 
+                @media screen and (max-width: 870px) {
+                    width: 90%;
+                    height: auto;
+                    margin-bottom: 50px;
+                }
+
+                .botones {
+                    border: 2px solid transparent;
+                    border-radius: 15px;
+                    background-color: map-get($coloresFondos, secundario);
+                    box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);  
+                    transition: 1s ease all;
+
+                    &:hover {
+                        border: 2px solid map-get($coloresLetras,parrafos);
+                        box-shadow: 0 0 15px 0 map-get($coloresLetras,parrafos);  
+                    }
+                }
+
                 h3 {
+                    border-top: 2px solid map-get($coloresLetras,parrafos);
+                    border-bottom: 2px solid map-get($coloresLetras,parrafos);
                     font-size: 25px;
-                    @media screen and (max-width: 870px) {
-                        font-size: 18px;
+                    height: 100px;
+
+                    @media screen and (max-width: 1187px) {
+                        font-size: 20px;
+                    }
+
+                    @media screen and (max-width: 855px) {
+                        height: auto;
+                        padding: 10px;
                     }
                 }
 
@@ -66,7 +114,6 @@ img {
                         width: 100%;
                     }
                 }
-
             }
         }
     }

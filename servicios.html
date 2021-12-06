@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APAPACH-ART</title>
+    <title>APAPACH-Servicios</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Link a CSS -->
@@ -15,8 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a0faba7661.js" crossorigin="anonymous"></script>
+    <!-- AOS Scroll Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-
 
 <body>
     <header class="encabezado">
@@ -40,67 +41,67 @@
         </label>          
     </header>
 
-    <hr>
-
-    <section class="servicios">
-        <title>Servicios de venta de mates artesanales</title>
-        <section class="servicios__titulos">
-            <H2>Productos y servicios</H2>
+    <main>
+        <div class="banner">
+            <div class="banner-contenido">
+                <h2>Mates y Bitacoras</h2>
+                <p>Todas nuestras artesanias para que las puedas disfrutar.</p>
+            </div>
+        </div>
     
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos tempore accusamus praesentium, magnam neque soluta quam explicabo sequi vel libero, quis beatae deserunt. Minima omnis, quos repudiandae ut similique animi sint labore nostrum libero sapiente debitis voluptatem aut dolore in magnam non quis error.</p>
-        </section>
-    
-        <section class="servicios__grid">
-            <div class="servicios__grid--img img1">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img2">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img3">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img4">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img5">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img6">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img7">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-            <div class="servicios__grid--img img8">
-                <h3>Titulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, possimus.</p>
-            </div>
-        </section>
-
-    </section>
+        <section class="servicios">            
+            <section class="servicios__titulos">
+                <H2>Productos</H2>
+                <p>Mates de algarrobo curados, con bombilla y listos para usar</p>
+                <p>Bitacoras de tamaño A5 de 120gr que pueden ser rayadas o lisas, 8 separadores de coloy y señalador!</p>
+            </section>
         
-    <hr>
+            <section class="servicios__grid">
+                <div data-aos="zoom-in" class="servicios__grid--img img1">
+                    <h3>Zorrimates</h3>
+                    <p>Mates con diferentes motivos! Caras,animales, caricaturas....</p>
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img2">
+                    <h3>Mates hexagonales</h3>
+                    <p>Mates moldeados. Altos, bajos, anchos, flacos, pintagudos, curvos...</p>
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img3">
+                    <h3>Caricatumates</h3>
+                    <p>"Expeliermuss!" Para los amantes de Harry, Los Vengadores, Los Simpson, y mucho mas!.</p>
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img4">
+                    <h3>Mundo mate</h3>
+                    <p>Pintamos tu rincon favorito del mundo!.</p>
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img5">
+                    <h3>Bitacoras</h3>                
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img6">
+                    <h3>Bitacoras</h3>
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img7">
+                    <h3>Bitacoras</h3>
+                </div>
+                <div data-aos="zoom-in" class="servicios__grid--img img8">
+                    <h3>Bitacoras</h3>
+                </div>
+            </section>
     
-    <footer  id="ubicacion">
+        </section>
+    </main>
+    
+    <footer data-aos="fade-up" id="ubicacion">
         <h2>Encontranos</h2>
         <section class="footerLinks">
             <div class="footerLinks__links">    
                 <div>
-                    <a href=""><i class="fas fa-phone-square-alt"></i></a>
+                    <a href="https://m.facebook.com/apapach.arts"><i class="fab fa-facebook-square"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="fas fa-envelope-square"></i></a>
+                    <a href="mailto:apapach.art.ok@gmail.com"><i class="fas fa-envelope-square"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://www.instagram.com/apapach.art/"><i class="fab fa-instagram-square"></i></a>
                 </div>
             </div>
             <div class="footerLinks__footerMap">
@@ -108,9 +109,13 @@
             </div>
         </section>
     </footer>
-
+    
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- AOS Initialize -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
        
 </body>
 </html>

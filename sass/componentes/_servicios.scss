@@ -1,9 +1,27 @@
 //  gridServicios
 
+.banner {
+    background-image: url(../img/bitacora-mate.jpeg);
+    @extend %bannerSticky;
+
+    &-contenido {
+        @extend %bannerSticki-contenido;
+
+        h2 {
+            @extend %bannerSticki-contenido-h2;
+        }
+
+        p {
+            @extend %bannerSticki-contenido-p;
+        }
+    }
+}
+
+
 .servicios {
-    display: grid;
+    background-color: map-get($coloresFondos, cuarto);    display: grid;
     grid-template-columns: 1fr 4fr;
-    @extend %espaciadoContenedor;
+    padding: 50px 0px;
 
     @media screen and (max-width: 830px) {
         display: flex;
@@ -17,6 +35,10 @@
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
+
+        p {
+            font-weight: bold;
+        }
     }
 
     &__grid {
@@ -43,58 +65,72 @@
             text-align: center;
             box-shadow: 0 0 15px 0 lighten( map-get($coloresFondos, cuarto), 15%);
             transition: ease 1s all;
+            margin: 10px;
+
+
+            @media screen and (max-width: 625px) {
+                height: 250px;
+            }
 
             h3 {
-                font-size: 25pxpx;
+                margin-top: 10px;
+                width: 70%;
+                font-size: 25px;
                 font-weight: bold;
+                border-top: 2px solid map-get($coloresLetras, parrafos);
             }
 
             p {
                 margin-top: 150px;
+                transition: 1s ease all;
+
+                @media screen and (max-width: 830px) {
+                    font-weight: bold;
+                }
             }
-    
         }
 
         &--img:hover {
             border: 3px solid lighten( map-get($coloresFondos, cuarto), 15%);
-            box-shadow: 0px 0px 15px 0px black;
-            color: #000;
+            box-shadow: 0px 0px 15px 0px map-get($coloresLetras, parrafos);
+            color: map-get($coloresLetras, parrafos);
+            transform: scale(1.05);
+
             p {
                 font-weight: bold;
             }
         }
 
         .img1 {
-            background-image: url(../img/mate-persona.jpg);
+            background-image: url(../img/mate-5.jpeg);
         }
         
         .img2 {
-            background-image: url(../img/mate-paisaje.jpg);
+            background-image: url(../img/mate-2.jpeg);
         }
         
         .img3 {
-            background-image: url(../img/mate-pava.jpg);
+            background-image: url(../img/mate-3.jpeg);
         }
         
         .img4 {
-            background-image: url(../img/mate-termo.jpg);
+            background-image: url(../img/mate-7.jpeg);
         }
         
         .img5 {
-            background-image: url(../img/mate-yerba.jpg);
+            background-image: url(../img/bitacora-1.jpeg);
         }
         
         .img6 {
-            background-image: url(../img/mate-pava.jpg);
+            background-image: url(../img/bitacora-2.jpeg);
         }
         
         .img7 {
-            background-image: url(../img/mate-persona.jpg);
+            background-image: url(../img/bitacora-3.jpeg);
         }
         
         .img8 {
-            background-image: url(../img/mate-termo.jpg);
+            background-image: url(../img/bitacora-4.jpeg);
         }
     }
-
 }

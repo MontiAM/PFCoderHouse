@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APAPACH-ART</title>
+    <title>APAPACH-Blog</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Link a CSS -->
@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a0faba7661.js" crossorigin="anonymous"></script>
+    <!-- AOS Scroll Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -38,36 +40,84 @@
           <i class="fas fa-bars"></i>
         </label>          
     </header>
-    
-    <hr>
 
     <main class="blog">
-        <title>Datos utiles sobre mates, mates artesanales y productos organicos</title>
+        <div class="blog__banner">
+            <div class="blog__banner-contenido">
+                <h2>Noticias</h2>
+                <p>Lo que necesitas saber de tu acompañante de momentos...</p>
+            </div>
+        </div>
 
         <section class="blog__seccion">
-            <h2>Noticias</h2>
+            <h2>Algunas noticias...</h2>
             <div class="blog__seccion--contenido">
                 <article>
                     <h3>Mate y felicidad. Razones por la cual la infusion favorita de los argentinos genera placer.</h3>
-                    <img src="img/mate-paisaje.jpg" alt="mate" class="imgNoticias">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis recusandae dolore illo ea quod molestias vitae accusamus architecto qui unde magnam error dolores doloribus accusantium deserunt ab, magni, quam labore commodi sunt saepe perferendis amet velit? Suscipit, explicabo! Ab reprehenderit dolorem ipsam! Atque, earum quia!</p>
+                    <button type="button" class="botones" data-bs-toggle="modal" data-bs-target="#exampleModal1">VER MAS</button>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1">Notitas al paso...</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/mate-paisaje.jpg" alt="mate" class="imgNoticias">
+                                    <p>Algunos estudios asocian el mate con el aumento de un neurotransmisor llamado serotonina en el cerebro, lo que se traduce en un equilibrio hormonal y se convierte entonces en un aliado natural contra el decaimiento anímico generando un aumento en los niveles de sensación de “felicidad”</p>
+                                    <a href="https://www.infobae.com/tendencias/2020/11/30/mate-y-felicidad-las-razones-por-las-cuales-la-infusion-favorita-de-los-argentinos-genera-placer/#:~:text=Algunos%20estudios%20asocian%20el%20mate,de%20sensaci%C3%B3n%20de%20%E2%80%9Cfelicidad%E2%80%9D.">Continuar leyendo</a>            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
+
                 <article>
                     <h3>El boom de la yerbamate!</h3>
-                    <img src="img/mate-yerba.jpg" alt="beneficios" class="imgNoticias">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis recusandae dolore illo ea quod molestias vitae accusamus architecto qui unde magnam error dolores doloribus accusantium deserunt ab, magni, quam labore commodi sunt saepe perferendis amet velit? Suscipit, explicabo! Ab reprehenderit dolorem ipsam! Atque, earum quia!</p>
+                    <button type="button" class="botones" data-bs-toggle="modal" data-bs-target="#exampleModal2">VER MAS</button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModal2Label">Notitas al paso...</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/mate-yerba.jpg" alt="beneficios" class="imgNoticias">
+                                    <p>La yerba mate es una tradición argentina que se ha instalado en todos los rincones del país. Más que una infusión, es un elemento cultural que conecta a todos los argentinos, convirtiéndose en un nexo para sociabilizar en reuniones con amigos, familiares e incluso, de trabajo. Y ahora, el consumo de esta infusión "tan criolla" se está trasladando a otras culturas del mundo.</p>
+                                    <a href="https://www.clarin.com/rural/pesar-coronavirus--boom-yerba-mate-cruzo-fronteras_0_xB3ymFt5T.html">Continuar leyendo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
+
                 <article>
                     <h3>Argentina produce el "capsulas de mate" y exporta el 60% de su produccion.</h3>
-                    <img src="img/mate-termo.jpg" alt="beneficios" class="imgNoticias">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis recusandae dolore illo ea quod molestias vitae accusamus architecto qui unde magnam error dolores doloribus accusantium deserunt ab, magni, quam labore commodi sunt saepe perferendis amet velit? Suscipit, explicabo! Ab reprehenderit dolorem ipsam! Atque, earum quia!</p>
+
+                    <button type="button" class="botones" data-bs-toggle="modal" data-bs-target="#exampleModal3">VER MAS</button>
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModal3Label">Notitas al paso...</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/mate-termo.jpg" alt="beneficios" class="imgNoticias">
+                                    <p>Trabajamos con empresas que tienen capacidad ilimitada y todos los registros para poder exportar como mantener el estándar de calidad. El Nitrotea lo produce una empresa en Santa Fe; las cápsulas se hacen en Mar del Plata y los blends en Lanús". "Hoy estamos exportando alrededor del 60% de nuestra producción.</p>
+                                    <a href="https://www.cronista.com/pyme/garage/descubren-un-nuevo-nicho-para-el-mate-for-export/#:~:text=%22Trabajamos%20con%20empresas%20que%20tienen,del%2060%25%20de%20nuestra%20producci%C3%B3n.">Continuar leyendo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                 </article>
             </div>
             
         </section>
-    
-        <hr>
-    
+        
         <section class="blog__seccion">
             <h2>Ayuditas del dia a dia.</h2>
             <div class="blog__seccion--contenido">
@@ -80,38 +130,34 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9BMHEqizjXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </article>
             </div>
-            
-        </section>
-    
-        <hr>
-
+        </section>    
     </main>
 
-    <footer  id="ubicacion">
+    <footer data-aos="fade-up" id="ubicacion">
         <h2>Encontranos</h2>
         <section class="footerLinks">
             <div class="footerLinks__links">    
                 <div>
-                    <a href=""><i class="fas fa-phone-square-alt"></i></a>
+                    <a href="https://m.facebook.com/apapach.arts"><i class="fab fa-facebook-square"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="fas fa-envelope-square"></i></a>
+                    <a href="mailto:apapach.art.ok@gmail.com"><i class="fas fa-envelope-square"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://www.instagram.com/apapach.art/"><i class="fab fa-instagram-square"></i></a>
                 </div>
             </div>
             <div class="footerLinks__footerMap">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0466887613097!2d-64.16950818530641!3d-31.412839703222726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2a16b3f0cb3%3A0x6a55a48df0de6c44!2sLima%201221%2C%20X5004%20FQO%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1633404035456!5m2!1ses!2sar" width="300" height="225" style="border: 1px solid #000;" allowfullscreen="" loading="lazy">Direccion</iframe>    
             </div>
-            
-        
         </section>
-        
     </footer>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!-- AOS Initialize -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
